@@ -12,7 +12,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/scripts.js"></script>
+<script>
+$(document).ready(function(){
+	var $this = $("#shirt");
+	$("main").hover(function(){
+		$this.addClass("away").removeClass("home");
+		$this.find("#collar").addClass("v").removeClass("round");
+	},function(){
+		$this.addClass("home").removeClass("away");
+		$this.find("#collar").addClass("round").removeClass("v");
+	});
+});
+</script>
 </head>
 
 <body>
